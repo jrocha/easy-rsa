@@ -235,3 +235,11 @@ CA for signing; this step is obviously not required if a single PKI is used as
 both the CA and keypair/request generation as the generated request is already
 "imported."
 
+
+
+Using Easy-RSA to generate certs with subjectAltName
+----------------------------------------------
+
+Easy-RSA can generate can easily generate certificates with subjectAltName provided in EASYRSA_EXTRA_EXTS env variable.
+
+    EASYRSA_EXTRA_EXTS="subjectAltName = DNS:localhost,DNS:dk015,DNS:dk015.dm001.f0.sys.srv.br,IP:127.0.0.1" ./easyrsa build-server-full test3
